@@ -4,15 +4,19 @@ import User from "./User";
 export default class SearchResults extends Component {
   state = {
     users: [],
+    allUsers: [],
   };
 
-  //steo:3
+  refresh = () => {
+    this.setState({ users: this.state.allUsers });
+  };
+
+  //step:3
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((result) => {
-        this.setState({ users: result });
-        console.log(this.state.users);
+        this.setState({ users: result, allUsers: result });
       });
   }
 
@@ -27,14 +31,28 @@ export default class SearchResults extends Component {
     return { users: filteredUsers };
   }
 
+  /*
+Task 5: Only search again, if the searchterm differs
+The goal of this task is to minimize the number of searches. 
+Therefore, you only re- render the SearchResults component 
+if the new searchFor-prop is different from the last one.
+*/
+
   shouldComponentUpdate(nextProps, nextState) {
-    //continue from here
+    if (JSON.stringify(nextState) === JSON.stringify(this.state)) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   render() {
+    console.log(this.state.users);
+    console.log(this.state.allUsers);
+    console.log("***** render");
     return (
       <div>
-        <table className="table table-success table-striped">
+        <table className="table table-primary table-striped">
           <User />
           <tbody>
             {this.state.users.map((user) => {
@@ -48,6 +66,7 @@ export default class SearchResults extends Component {
             })}
           </tbody>
         </table>
+        <button onClick={this.refresh}>Refresh</button>
       </div>
     );
   }
