@@ -1,6 +1,6 @@
-![Result secreenshot image](reference-images/Avatar.png)
-
 # Result Layout
+
+![Result secreenshot image](reference-images/Avatar.png)
 
 # Task 1: Layout
 
