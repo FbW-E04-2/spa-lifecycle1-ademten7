@@ -1,3 +1,5 @@
+![Result secreenshot image](reference-images/Avatar.png)
+
 # Task 1: Layout
 
 1. Create the following layout in the App-component. Do not create any other components yet
@@ -85,4 +87,3 @@ last one.
 ### When the SearchResults-component mounts,load the user-data from
 
 [jsonplaceholder API link](https://jsonplaceholder.typicode.com/users)
-[Result secreenshot](reference-images/Avatar.jpg)
