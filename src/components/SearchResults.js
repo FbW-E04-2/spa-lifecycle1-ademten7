@@ -34,7 +34,7 @@ export default class SearchResults extends Component {
   // }
 
   /*
-Task 5: Only search again, if the searchterm differs
+Task 5: Only search again, if the search term differs
 The goal of this task is to minimize the number of searches. 
 Therefore, you only re- render the SearchResults component 
 if the new searchFor-prop is different from the last one.

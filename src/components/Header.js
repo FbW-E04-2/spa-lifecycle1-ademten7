@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
@@ -7,10 +8,13 @@ export default class Header extends Component {
         <h1 className="header">
           User Search
           <div>
-            <span onClick={() => this.props.switchToSearchResult()}>
-              Search
-            </span>{" "}
-            | <span onClick={() => this.props.switchToAboutPage()}>About</span>
+            <Link to="/">
+              <span>Search</span>
+            </Link>
+            |{" "}
+            <Link to="/about">
+              <span>About</span>
+            </Link>
           </div>
         </h1>
       </div>

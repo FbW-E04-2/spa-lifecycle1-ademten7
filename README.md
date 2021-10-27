@@ -1,6 +1,7 @@
 # Result Layout
 
 ![Result secreenshot image](reference-images/Avatar.png)
+![Result secreenshot image](reference-images/Not_Found_Screenshot.png)
 
 # Task 1: Layout
 
