@@ -1,5 +1,7 @@
 ![Result secreenshot image](reference-images/Avatar.png)
 
+# Result Layout
+
 # Task 1: Layout
 
 1. Create the following layout in the App-component. Do not create any other components yet
