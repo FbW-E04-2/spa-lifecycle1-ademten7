@@ -19,9 +19,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.searchTerm);
-    console.log(this.state.lastSearchTerm);
-
     return (
       <div className="container">
         <Header
